@@ -20,7 +20,7 @@
 
 <body>
 
-  <?= $view->navbar("error", $_SESSION['ID']); ?>
+  <?= $view->navbar("error"); ?>
 
   <br>
 
@@ -29,7 +29,19 @@
 
       <br>
 
-      <p>Du-te înapoi pe <a href="index.php">pagina principală</a></p>
+      <p>Du-te înapoi pe <a href="index.php">pagina principală</a>.</p>
+      <p>Sau poți aștepta 5 secunde până când vei fi redirecționat automat.</p>
+
+      <script>
+
+        setTimeout(redirect, 5000);
+
+        function redirect()
+        {
+            window.location.replace("index.php");
+        }
+      </script>
+      <br><br><br><br><br><br><br>
   </div>
 
   <br>

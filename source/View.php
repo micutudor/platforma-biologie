@@ -57,7 +57,9 @@
           ?>
           <nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark bg-success">
             <div class="container">
-              <img src="assets/logo.png" width="120" height="46">
+              <a href="index.php">
+                <img src="assets/logo.png" width="120" height="46">
+              </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -70,7 +72,7 @@
                           </li>
                         </ul>
                       </div>
-              <?php } else if ($page != 'error'){ ?>
+              <?php } else if ($page != 'error' && $page != 'about-us'){ ?>
                       <div class="collapse navbar-collapse" id="navbarColor02">
                         <ul class="navbar-nav ml-auto">
                           <li class="nav-item <?php if ($page == 'chapters' || $page == 'lesson' || $page == 'training' || $page == 'questions' || $page == 'formulas' || $page == 'constants') echo 'active' ?> dropdown">
@@ -143,23 +145,23 @@
           <footer class="footer">
             <div class="container">
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-1">
                   <h5><?= PROJECT_NAME ?></h5>
-                  <a href="despre/despre-proiect.html">despre proiect</a><br>
-                  <a href="despre/despre-proiect.html">contactează-ne</a><br>
+                  <a href="about-us.php">despre proiect</a><br>
+                  <a href="mailto:tudor.micubd@gmail.com">contactează-ne</a><br>
                   <p>(c) 2020 tudor m feat. andrei gh</p>
                 </div>
-                <div class="col-lg-4">
-                  <h5>legal</h5>
-                  <a href="despre/despre-proiect.html">termeni și condiții</a><br>
-                  <a href="despre/despre-proiect.html">privacy</a><br>
-                  <a href="despre/despre-proiect.html">cookies</a>
+                <div class="col-lg-4 mb-2">
+                  <h5>Legal</h5>
+                  <a href="docs/terms.docx">termeni și condiții</a><br>
+                  <a href="docs/privacy.docx">privacy</a><br>
+                  <a href="docs/cookies.docx">cookies</a>
                 </div>
-                <div class="col-lg-4">
-                  <h5>ne găsești pe:</h5>
-                  <a href="despre/despre-proiect.html"><i class="fab fa-facebook-square"></i> facebook</a><br>
-                  <a href="despre/despre-proiect.html"><i class="fab fa-twitter"></i> twitter</a><br>
-                  <a href="despre/despre-proiect.html"><i class="fab fa-instagram"></i> instagram</a>
+                <div class="col-lg-4 mb-1">
+                  <h5>Ne găsești pe:</h5>
+                  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i> facebook</a><br>
+                  <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> twitter</a><br>
+                  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> instagram</a>
                 </div>
               </div>
             </div>
