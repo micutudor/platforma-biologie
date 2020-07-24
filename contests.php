@@ -356,6 +356,9 @@
               <?php
                 } else if ($contestData['Status'] == 2) {
               ?>
+                    <h5><?= $contestData['Name'] ?></h5>
+                    <p><?= $contestData['Description'] ?></p>
+
                     <div class="row">
                       <div class="col-lg-4">
                         <div class="card border-light mb-3" style="max-width: 20rem;">

@@ -844,7 +844,7 @@
             <br>
 
             <?php if (!$achievement->hasUserUnlocked($_SESSION['ID'], 20)) { ?>
-                    <a href="" class="card-link btn btn-success btn disabled"><span class="fa fa-lock mr-2">Blocată</a>
+                    <a href="" class="card-link btn btn-success btn disabled"><span class="fa fa-lock mr-2"></span>Blocată</a>
             <?php } else if ($achievement->hasUserClaimed($_SESSION['ID'], 20)){?>
                     <a href="" class="card-link btn btn-success btn disabled"><span class="fa fa-unlock mr-2"></span>Revendicat</a>
             <?php } else { ?>

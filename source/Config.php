@@ -2,7 +2,7 @@
 
   # Project's info
   define("PROJECT_NAME", "biologie-pe.net");
-  define("STATUS", "DEV");
+  define("STATUS", "NODEV");
 
   define("LEVEL_POINT", "1200");
 

@@ -36,7 +36,6 @@
       <h3>De ce?</h3>
       <ul>
         <li><p>Fiindcă poți să îi inviți la provocări și să vedeți cine este cel mai bun la Biologie!</p></li>
-        <li><p>Poți apărea în leaderboard la categoria Popular, cel mai șmecher clasament de pe site.</p></li>
         <li><p>La fiecare avansare în nivel a lui primești 1<span class="fa fa-viruses ml-1"></span> și 30% din XP-ul consumat.</p></li>
       </ul>
 

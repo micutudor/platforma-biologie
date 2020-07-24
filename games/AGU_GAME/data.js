@@ -11,7 +11,7 @@ var tastes = [
 ];
 
 var products = [
-  ["Coca-Cola" SWEET],
+  ["Coca-Cola", SWEET],
   ["Pepsi", SWEET],
   ["Căpșuni", SWEET],
   ["Covrigei sarați", SALTY],
