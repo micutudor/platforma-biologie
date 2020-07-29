@@ -3,6 +3,7 @@
 	require_once 'source/User.php';
 	require_once 'source/Challenge.php';
 	require_once 'source/Contest.php';
+	require_once 'source/Question.php';
 	require_once 'source/Achievement.php';
 
 	/* Update all active challenges status and declare winner */
@@ -80,6 +81,7 @@
 								$Winner = $contest->getLeader($contestData['ID']);
 								$contest->setWinner($contestData['ID'], $Winner);
 
+								$achievement = new Achievement();
 								if (!$achievement->hasUserUnlocked($Winner, 19))
 										$achievement->unlock($Winner, 19);
 
@@ -87,10 +89,8 @@
 								$user->giveCoins($Winner, $contestData['Prize']);
 								$user->giveTrophy($Winner);
 
-								$CMD = $challenge->db->prepare("UPDATE `questions` SET `Blocked` = 0 WHERE `Contest` = :Contest");
-								$CMD->bindParam(':Contest', $contestData['ID']);
-
-								$CMD->execute();
+								$contest = new Contest();
+								$question->unblockQuestions($contestData['ID']);
 						}
 				}
 	}

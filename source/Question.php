@@ -353,6 +353,14 @@
 
           return $CMD;
       }
+
+      public function unblockQuestions($Contest)
+      {
+          $CMD = $this->db->prepare("UPDATE `questions` SET `Blocked` = 0 WHERE `Contest` = :Contest");
+          $CMD->bindParam(':Contest', $Contest);
+
+          $CMD->execute();
+      }
   }
 
 ?>
