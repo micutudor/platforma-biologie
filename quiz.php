@@ -175,6 +175,29 @@
                       Ai reușit să răspunzi la toate întrebările din simulare la timp!
                     </p>
                     <?php if (isset($_SESSION['inChallenge']) && $_SESSION['inChallenge'] == true) { ?>
+                              <?php
+                                $joinedChallenges = $user->countChallenges($_SESSION['ID']);
+
+                                $achievement = new Achievement();
+
+                                if (!$achievement->hasUserUnlocked($_SESSION['ID'], 10)) {
+                                    $achievement->unlock($_SESSION['ID'], 10);
+                                }
+
+                                if ($joinedChallenges == 10)
+                                {
+                                    if (!$achievement->hasUserUnlocked($_SESSION['ID'], 11)) {
+                                        $achievement->unlock($_SESSION['ID'], 11);
+                                    }
+                                }
+                                else if ($joinedChallenges == 50)
+                                {
+                                    if (!$achievement->hasUserUnlocked($_SESSION['ID'], 12)) {
+                                        $achievement->unlock($_SESSION['ID'], 12);
+                                    }
+                                }
+                              ?>
+
                               <p class="card-text">
                                 Dorești să vezi clasamentul provocării?
                               </p>

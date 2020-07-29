@@ -459,7 +459,7 @@
 
       public function countChallenges($ID)
       {
-          $CMD = $this->db->prepare("SELECT ID FROM `quizzes` WHERE `Challenge` IS NOT NULL");
+          $CMD = $this->db->prepare("SELECT ID FROM `quizzes` WHERE `Challenge` IS NOT NULL AND Solver = :User");
           $CMD->bindParam(":User", $ID);
 
           $CMD->execute();
