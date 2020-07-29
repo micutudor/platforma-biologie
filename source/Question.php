@@ -322,9 +322,13 @@
           return $result['answerEx'];
       }
 
-      public function getChapterAll($Chapter)
+      public function getChapterAll($Chapter, $isTraining = false)
       {
-          $CMD = $this->db->prepare("SELECT * FROM `questions` WHERE Chapter = :Chapter AND Blocked = 0 AND Contest = 0");
+          if ($isTraining)
+              $CMD = $this->db->prepare("SELECT * FROM `questions` WHERE Chapter = :Chapter AND Blocked = 0 AND Contest = 0");
+          else
+              $CMD = $this->db->prepare("SELECT * FROM `questions` WHERE Chapter = :Chapter");
+
           $CMD->bindParam(':Chapter', $Chapter);
 
           $CMD->execute();

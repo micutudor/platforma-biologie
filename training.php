@@ -34,7 +34,7 @@
       $_SESSION['tWAns'] = 0;
 
       $_SESSION['tQuestions'] = array();
-      $questionsData = $question->getChapterAll($_SESSION['tChapter']);
+      $questionsData = $question->getChapterAll($_SESSION['tChapter'], true);
 
       $q = 0;
       foreach($questionsData as $questionData){
