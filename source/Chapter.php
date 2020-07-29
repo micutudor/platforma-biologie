@@ -129,7 +129,7 @@
 
       public function countQuestions($Chapter)
       {
-          $CMD = $this->db->prepare("SELECT COUNT(ID) as count FROM `questions` WHERE Chapter = :Chapter");
+          $CMD = $this->db->prepare("SELECT COUNT(ID) as count FROM `questions` WHERE Chapter = :Chapter AND Contest = 0");
           $CMD->bindParam(':Chapter', $Chapter);
           $CMD->execute();
 
