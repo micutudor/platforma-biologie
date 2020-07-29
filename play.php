@@ -128,6 +128,7 @@
         Points = 0;
         Lifes = 3;
         updateBar();
+        document.getElementById('finish').style.display = 'none';
         startGame();
     }
 
