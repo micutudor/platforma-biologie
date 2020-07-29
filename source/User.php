@@ -156,7 +156,7 @@
 
       public function giveTrophy($ID)
       {
-          $CMD = $this->db->prepare("UPDATE `users` SET `Trophy` = Trophy + 1 WHERE `ID` = :ID");
+          $CMD = $this->db->prepare("UPDATE `users` SET `Trophies` = Trophies + 1 WHERE `ID` = :ID");
           $CMD->bindParam(':ID', $ID);
 
           $CMD->execute();

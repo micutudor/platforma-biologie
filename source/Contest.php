@@ -150,7 +150,7 @@
 
       public function getLeader($ID)
       {
-          $CMD = $this->db->prepare("SELECT * FROM `quizzes` WHERE `Contest` = :Contest ORDER BY Result DESC, STime ASC LIMIT 1");
+          $CMD = $this->db->prepare("SELECT Solver FROM `quizzes` WHERE `Contest` = :Contest ORDER BY Result DESC, STime ASC LIMIT 1");
           $CMD->bindParam(':Contest', $ID);
 
           $CMD->execute();

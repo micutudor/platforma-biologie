@@ -89,7 +89,7 @@
 								$user->giveCoins($Winner, $contestData['Prize']);
 								$user->giveTrophy($Winner);
 
-								$contest = new Contest();
+								$question = new Question();
 								$question->unblockQuestions($contestData['ID']);
 						}
 				}
