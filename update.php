@@ -15,7 +15,7 @@
 				$now = new DateTime();
 				$chExpireAt = new DateTime($challengeData['ExpireAt']);
 
-				if ($now->add(new DateInterval("PT24H")) > $chExpireAt)
+				if ($now > $chExpireAt)
 				{
 						$challenge->setStatus($challengeData['Code'], 1);
 
@@ -48,8 +48,6 @@
 				        }
 				    }
 				}
-				else
-						break;
 	}
 
 	/* Update all contests stats and declare winner */
@@ -87,7 +85,7 @@
 
 								$user = new User();
 								$user->giveCoins($Winner, $contestData['Prize']);
-								$user->giveTrophy($_SESSION['ID']);
+								$user->giveTrophy($Winner);
 
 								$CMD = $challenge->db->prepare("UPDATE `questions` SET `Blocked` = 0 WHERE `Contest` = :Contest");
 								$CMD->bindParam(':Contest', $contestData['ID']);
