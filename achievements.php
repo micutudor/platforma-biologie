@@ -803,7 +803,7 @@
             <?php } else if ($achievement->hasUserClaimed($_SESSION['ID'], 19)){?>
                     <a href="" class="card-link btn btn-success btn disabled"><span class="fa fa-unlock mr-2"></span>Revendicat</a>
             <?php } else { ?>
-                    <a href="process.php?target=achievement&action=achieve&target_id=1" class="card-link btn btn-success btn"><span class="fa fa-gift mr-2"></span><span class="fa fa-gift mr-2"></span>400 XP + 1<span class="fa fa-viruses ml-1"></span></a>
+                    <a href="process.php?target=achievement&action=achieve&target_id=19" class="card-link btn btn-success btn"><span class="fa fa-gift mr-2"></span><span class="fa fa-gift mr-2"></span>400 XP + 1<span class="fa fa-viruses ml-1"></span></a>
             <?php } ?>
           </div>
         </div>
